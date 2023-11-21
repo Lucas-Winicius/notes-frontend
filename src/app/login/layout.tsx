@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full flex flex-wrap space-y-5 justify-center items-center my-10">
+    <div className="bg-neutral-800 w-screen h-screen flex items-center justify-center">
       {children}
     </div>
   );
