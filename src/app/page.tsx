@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import { getCookie, setCookie } from "cookies-next";
 import axios from "axios";
+import Header from "@/components/Header";
 
 export default function Home() {
-  const [notes, setNotes] = useState<NoteType[]>();
+  const [user, setUser] = useState<UserType>();
   const userId = getCookie("UserAuthentication");
   const api_url = process.env.NEXT_PUBLIC_API_URL;
 
@@ -18,13 +19,18 @@ export default function Home() {
       },
     })
       .then((r) => r.data)
-      .then((d) => setNotes(d.notes))
+      .then((d) => setUser(d))
       .catch(() => {
         setCookie("UserAuthentication", null, {
           expires: new Date(Date.now()),
         });
-      })
+      });
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      <Header nick={user?.nick} />
+      <div></div>
+    </div>
+  );
 }
