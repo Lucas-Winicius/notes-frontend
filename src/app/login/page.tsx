@@ -49,7 +49,7 @@ function Login() {
   return (
     <div className="bg-stone-900 lg:w-4/12 h-3/4 p-10 rounded-2xl flex flex-col justify-between space-y-16 shadow-xl hover:shadow-2xl transition">
       <div className="w-full flex justify-center">
-        <h1 className="text-white text-2xl font-bold">AnotaAi</h1>
+        <h1 className="text-white text-2xl font-bold">NoteIt</h1>
       </div>
       <div className="space-y-10">
         <div className="flex flex-row space-x-3 border-b border-b-zinc-300 pb-2 px-3">
@@ -74,7 +74,7 @@ function Login() {
         </div>
         {form.loginError && (
           <p className="text-xs text-center text-red-600 font-bold">
-            Usuario ou senha incorretos.
+            incorrect username or password.
           </p>
         )}
       </div>
@@ -84,7 +84,7 @@ function Login() {
           onClick={handleSubmit}
           type="submit"
         >
-          Registrar
+          Register
         </button>
       </div>
     </div>
