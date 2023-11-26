@@ -2,7 +2,7 @@ import Image from "next/image";
 import list from "@/images/list.svg";
 import timeGreetings from "@/services/timeGreetings";
 
-function Header({ nick }: { nick?: string }) {
+export default function Header({ nick }: { nick?: string }) {
   return (
     <header className="py-5 px-8">
       <div className="flex space-x-7">
@@ -12,5 +12,3 @@ function Header({ nick }: { nick?: string }) {
     </header>
   );
 }
-
-export default Header;
