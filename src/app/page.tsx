@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getCookie, setCookie } from "cookies-next";
 import axios from "axios";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [user, setUser] = useState<UserType>();
@@ -30,7 +31,8 @@ export default function Home() {
   return (
     <div>
       <Header nick={user?.nick} />
-      <div></div>
+      <div className="min-h-[calc(100vh-120px)]"></div>
+      <Footer />
     </div>
   );
 }
