@@ -9,6 +9,10 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
+  if (pathname === "/create" && !AuthCookies) {
+    return NextResponse.redirect(new URL("/login", req.url));
+  }
+
   if (pathname === "/login" && AuthCookies) {
     return NextResponse.redirect(new URL("/", req.url));
   }
@@ -17,5 +21,5 @@ export default async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/login"],
+  matcher: ["/", "/login", "/create"],
 };

@@ -39,6 +39,7 @@ function Login() {
 
       route.push("/")
     } catch (e) {
+      console.info("ERROR: ", e)
       setForm({
         ...form,
         loginError: true,
