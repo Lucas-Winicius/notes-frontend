@@ -8,7 +8,7 @@ export default function CreateNote() {
 
   return (
     <div
-      className="w-40 h-40 bg-stone-900 flex items-center justify-center relative rounded cursor-pointer mx-3 my-5"
+      className="w-40 h-40 bg-stone-900 flex items-center justify-center relative rounded cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
